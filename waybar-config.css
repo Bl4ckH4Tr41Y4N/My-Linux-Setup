@@ -1,0 +1,76 @@
+/* Reset and Font */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* Main Bar Window */
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent Black */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle White Edge */
+    border-radius: 12px;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* Individual Module Pill Styling */
+#custom-launcher,
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    background: rgba(255, 255, 255, 0.08); /* Transparent Grey */
+    color: #eeeeee;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 8px;
+}
+
+/* Arch Launcher Specific */
+#custom-launcher {
+    font-size: 18px;
+    color: #ffffff;
+    padding-right: 16px;
+}
+
+#custom-launcher:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 5px;
+    color: #777777; /* Inactive Grey */
+}
+
+#workspaces button.active {
+    color: #ffffff; /* Active White */
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Clock styling - center focused */
+#clock {
+    background: transparent;
+    font-size: 14px;
+}
+
+/* Critical States */
+#battery.critical:not(.charging) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#network.disconnected {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #888888;
+}
